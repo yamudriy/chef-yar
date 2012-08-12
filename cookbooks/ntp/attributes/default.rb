@@ -21,7 +21,7 @@
 
 # default attributes for all platforms
 default[:ntp][:is_server] = false
-default[:ntp][:servers]   = ["0.pool.ntp.org", "1.pool.ntp.org"]
+default[:ntp][:servers]   = ["0.us.pool.ntp.org", "1.us.pool.ntp.org", "2.us.pool.ntp.org", "3.us.pool.ntp.org"]
 default[:ntp][:driftfile] = "/var/lib/ntp/ntp.drift"
 default[:ntp][:statsdir] = "/var/log/ntpstats/"
 
