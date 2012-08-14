@@ -27,4 +27,25 @@ if ['debian','ubuntu'].member? node[:platform]
     action :nothing
   end
 
+if ['centos','redhat','scientific','fedora'].member? node[:platform]
+  # Make sure it's installed. It would be a pretty broken system
+  # that didn't have it.
+  package "tzdata"
+
+  execute "hwclock-sync" do
+    command "cp -f /usr/share/zoneinfo/#{node[:tz]} /etc/localtime"
+    # Hardware clock synchronization doesn't work on virtual machines ?
+    #command "hwclock --systohc > /dev/null 2>&1"
+    action :nothing
+  end
+
+  template "/etc/sysconfig/clock" do
+    source "clock.erb"
+    owner 'root'
+    group 'root'
+    mode 0644
+    notifies :run, resources(:execute => "hwclock-sync")
+  end
+
+
 end
