@@ -27,7 +27,8 @@
 #  action :install
 #end
 
-node[:needed_packages].each do |pkg|
+# Install needed packages
+node[:ca-wstation][:needed_packages].each do |pkg|
   package pkg
 end
 
