@@ -28,12 +28,12 @@
 #end
 
 # Install needed packages
-node[:ca-wstation][:needed_packages].each do |pkg|
+node['ca-wstation'][:needed_packages].each do |pkg|
   package pkg
 end
 
-execute "Install Dev Tools" do
-  command "yum -y --setopt=group_package_types=mandatory groupinstall 'Development tools'"
-  creates "/usr/bin/repoquery"
-  action :run
-end
+#execute "Install Dev Tools" do
+#  command "yum -y --setopt=group_package_types=mandatory groupinstall 'Development tools'"
+#  creates "/usr/bin/repoquery"
+#  action :run
+#end
