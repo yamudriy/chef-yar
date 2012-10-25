@@ -1,0 +1,29 @@
+{
+  "groupings": {
+  },
+  "version": "0.0.1",
+  "platforms": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "maintainer": "YOUR_COMPANY_NAME",
+  "description": "Installs/Configures fast_start",
+  "suggestions": {
+  },
+  "replacing": {
+  },
+  "license": "All rights reserved",
+  "attributes": {
+  },
+  "recommendations": {
+  },
+  "name": "ca-wstation",
+  "recipes": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "dependencies": {
+  },
+  "maintainer_email": "YOUR_EMAIL"
+}
